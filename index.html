@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru" ng-app="appEAF3">
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    <link rel="SHORTCUT ICON" href="/favicon.ico">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>EAF 3</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+</head>
+<body> <!--  ng-controller="homeCtrl" -->
+<nav class="navbar navbar-fixed-top navbar-inverse"  id="noprint1">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">ДСП-3</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#/report">Отчеты</a></li>
+                <li><a href="#/heatprocess">Слежение</a></li>
+                <li><a href="#/contact">Контакты</a></li>
+                <li><a href="#/login">Login</a></li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+<div class="container">
+
+    <div ng-view></div>
+
+    <footer>
+        <!--<p>&copy; АСУТП ЭСПЦ 2016</p>-->
+        <div class="container">
+            <div class="row navbar-inverse navbar-justified navbar-fixed-bottom row-fluid">
+                <!-- replaced this with above: <div class="row"> -->
+                <div class="col-sm-12 text-center f_footer"><!-- centers buttons when screen -->
+                    <p>&copy; АСУТП ЭСПЦ 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div><!--/.container-->
+
+
+<!-- Angular.js core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="bower_components/angular/angular.js"></script>
+<!--Angular.js Route-->
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!--Angular.js Resource-->
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+
+<script src="js/controllers.js"></script>
+
+</body>
+</html>

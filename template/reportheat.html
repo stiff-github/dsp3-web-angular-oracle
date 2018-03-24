@@ -1,0 +1,32 @@
+<div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-xs-12 col-sm-8" id="noprint0">
+        <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+        </p>
+        <div class="row">
+            <form>
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <label for="selectHeats">№ плавки:</label>
+                        </br>
+                        <input style="width: 80px; text-align:left;" type="text" placeholder="Фильтр №" ng-model="fltrHeats">
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <select style="width: 80px; text-align:left;" size="20" name="selectHeats" id="selectHeats" ng-model="numHeat">
+                            <option ng-repeat="lstHeat in lstHeats | filter: fltrHeats">{{lstHeat.heatid}}</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-2">
+                        <br /><br /><br />
+                        <button type="button" class="btn btn-success" ng-click="openReportHeat(numHeat)"><span class="glyphicon glyphicon-list-alt"></span> Отчёт о плавке</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div><!--/.col-xs-12.col-sm-8-->
+</div><!--/row-->

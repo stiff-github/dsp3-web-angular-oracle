@@ -1,0 +1,160 @@
+<div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-xs-12 col-sm-8">
+        <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+        </p>
+        <div class="row">
+            <!--<div class="col-xs-12 col-sm-6 col-lg-4 item" ng-repeat="dd in ds">
+                <p>{{ dd.var_name }}</p>
+                <p>{{ dd.var_value }}</p>
+            </div><!--/.col-sm-6.col-lg-4-->
+            <div class="panel panel-default" >
+                <!-- Default panel contents -->
+                <div class="panel-heading"><a href="" style="color: #000000;font-weight: bold;" ng-click="hidePanelHeat()">Данные по текущей плавке</a></div>
+                <div class="panel-body" style="display:{{vsblPanelHeat}}">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <tr class="info">
+                                <th>номер плавки</th>
+                                <th>начало плавки</th>
+                                <th>статус плавления</th>
+                                <th>марка стали</th>
+                                <th>профиль плавление</th>
+                                <th>профиль "море"</th>
+                            </tr>
+                            <tbody>
+                            <tr>
+                                <th>{{ dataHeat.heatid }}</th>
+                                <th>{{ dataHeat.heatstart }}</th>
+                                <th>{{ dataHeat.statusi }}</th>
+                                <th>{{ dataHeat.marka }}</th>
+                                <th>{{ dataHeat.meltingprofile }}</th>
+                                <th>{{ dataHeat.profilemore }}</th>
+                            </tr>
+                            <tr>
+                                <th colspan="6"></th>
+                            </tr>
+                            <tr class="info">
+                                <th>статус печи</th>
+                                <th>электроэнергия</th>
+                                <th>расчётная температура</th>
+                                <th>расход аргона</th>
+                                <th>расход азота</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th><div ng-if="dataHeat.dspon === '0'">Выключена</div><div ng-if="dataHeat.dspon > '0'">Включена</div></th>
+                                <th>{{ dataHeat.totalpower }}</th>
+                                <th>{{ dataHeat.temp }}</th>
+                                <th>{{ dataHeat.argon }}</th>
+                                <th>{{ dataHeat.azot }}</th>
+                                <th></th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default" >
+                <!-- Default panel contents -->
+                <div class="panel-heading"><a href="" style="color: #000000;font-weight: bold;" ng-click="hidePanelIn()">Инжекторные горелки</a></div>
+                <div class="panel-body" style="display:{{vsblPanelIn}}">
+                <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr class="info">
+                        <th></th>
+                        <th>Общий</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>О2 вдувания</th>
+                        <th>{{ dataBurner.injoxyflwght }}</th>
+                        <th>{{ dataBurner.injoxyflwght1 }}</th>
+                        <th>{{ dataBurner.injoxyflwght2 }}</th>
+                        <th>{{ dataBurner.injoxyflwght3 }}</th>
+                        <th>{{ dataBurner.injoxyflwght4 }}</th>
+                        <th>м3</th>
+                    </tr>
+                    <tr>
+                        <th>О2 горения</th>
+                        <th>{{ dataBurner.injoxywght }}</th>
+                        <th>{{ dataBurner.injoxywght1 }}</th>
+                        <th>{{ dataBurner.injoxywght2 }}</th>
+                        <th>{{ dataBurner.injoxywght3 }}</th>
+                        <th>{{ dataBurner.injoxywght4 }}</th>
+                        <th>м3</th>
+                    </tr>
+                    <tr>
+                        <th>Газ</th>
+                        <th>{{ dataBurner.injnatgaswght }}</th>
+                        <th>{{ dataBurner.injnatgaswght1 }}</th>
+                        <th>{{ dataBurner.injnatgaswght2 }}</th>
+                        <th>{{ dataBurner.injnatgaswght3 }}</th>
+                        <th>{{ dataBurner.injnatgaswght4 }}</th>
+                        <th>м3</th>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading"><a href="" style="color: #000000;font-weight: bold;" ng-click="hidePanelUg()">Углеродные горелки</a></div>
+                <div class="panel-body" style="display:{{vsblPanelUg}}">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr class="info">
+                                <th></th>
+                                <th>Общий</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>О2 горения</th>
+                                <th>{{ dataBurner.carboxywght }}</th>
+                                <th>{{ dataBurner.carboxywght1 }}</th>
+                                <th>{{ dataBurner.carboxywght2 }}</th>
+                                <th>{{ dataBurner.carboxywght3 }}</th>
+                                <th>м3</th>
+                            </tr>
+                            <tr>
+                                <th>Газ</th>
+                                <th>{{ dataBurner.carbnatgaswght }}</th>
+                                <th>{{ dataBurner.carbnatgaswght1 }}</th>
+                                <th>{{ dataBurner.carbnatgaswght2 }}</th>
+                                <th>{{ dataBurner.carbnatgaswght3 }}</th>
+                                <th>м3</th>
+                            </tr>
+                            <tr>
+                                <th>Углерод</th>
+                                <th>{{ dataBurner.carbcwght }}</th>
+                                <th>{{ dataBurner.carbcwght1 }}</th>
+                                <th>{{ dataBurner.carbcwght2 }}</th>
+                                <th>{{ dataBurner.carbcwght3 }}</th>
+                                <th>кг</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!--<button type="submit" value="submit" class="btn btn-primary" ng-click="burnRefresh()">refresh</button>-->
+        </div>
+    </div><!--/.col-xs-12.col-sm-8-->
+</div><!--/row-->

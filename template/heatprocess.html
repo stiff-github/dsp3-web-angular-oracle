@@ -1,0 +1,188 @@
+<div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row row2">
+            <div class="blok-inf">
+                <form>
+                    <div class="nextdiv" style="padding-right: 0;">
+                        <fieldset>
+                            <legend>Данные по плавке</legend>
+                            <div class="nextdiv">
+                                <p>№ плавки </p><input class="p_r" type="text" value="{{ dataHeat.heatid }}" size="5" readonly><br>
+                                <p>Марка </p><input class="p_r" style="width: 186px;" type="text" value="{{ dataHeat.marka }}" readonly><br>
+                                <p>Статус </p><input class="p_r" style="width: 186px;" type="text" value="{{ dataHeat.statusi }}" readonly><br>
+                                <p>Профиль плавления </p><input class="p_r" type="text" value="{{ dataHeat.meltingprofile }}" size="1" readonly>
+                            </div>
+                            <div class="nextdiv">
+                                <p>Время плавки [мин] </p><input class="p_r" style="width: 48px;" type="text" value="{{ dataHeat.durheat }}" readonly><br>
+                                <p>Остав. время [мин] </p><input class="p_r" style="width: 48px;" type="text" value="{{ dataHeat.tilltap }}" readonly><br>
+                                <p>Простои [мин] </p><input class="p_r" style="width: 48px;" type="text" value="{{ dataHeat.durdel }}" readonly><br>
+                                <p>Темп-ра выпуска [°С] </p><input class="p_r" style="width: 48px;" type="text" value="{{ dataHeat.taptempplan }}" readonly>
+                            </div>
+                            <div class="nextdiv">
+                                <p>Вес выпуска [т] </p><input class="p_r" type="text" value="{{ dataHeat.tapweightplan }}" size="3" readonly><br>
+                                <p>Обратный слив [т] </p><input class="p_r" type="text" value=" " size="3"><br>
+                                <p>Болото пред. пл. [т] </p><input class="p_r" type="text" value="{{ dataHeat.hotheelprevious }}" size="3" readonly><br>
+                                <p>Болото на выпуске [т] </p><input class="p_r" type="text" value="{{ dataHeat.hotheelplan }}" size="3" readonly>
+                            </div>
+                            <div class="nextdiv">
+                                <p>Корзины </p><input class="p_r" style="width: 96px;" type="text" value="{{ dataHeat.buckets }}" readonly><br>
+                                <br>
+                                <p>Скрап [т] </p><input class="p_r" style="float: none; margin-left: 17px;width: 96px;" type="text" value="{{ dataHeat.scrap }}" readonly><br>
+                            </div>
+                            <div class="nextdiv">
+                                <p>№ ковша </p><input class="p_r" type="text" value="{{ dataHeat.ladleid }}" size="3" readonly><br>
+                                <p>Плавка на ковш </p><input class="p_r" type="text" value="{{ dataHeat.heatsonladle }}" size="3" readonly><br>
+                                <p>Температура</p><br>
+                                <p>футеровки </p><input class="p_r" type="text" value="{{ dataHeat.ladletemp }}" size="3" readonly>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="nextdiv" style="padding-right: 0;">
+                        <div class="nextdiv">
+                            <fieldset class="nextdiv" style="padding-right: 0;">
+                                <legend>Подача / Бункера</legend>
+                                <div class="nextdiv">
+                                    <div style="min-width: 1px;display: inline-block;"></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 60px;">Окатыши</p></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 13px;">Известь</p></div><br>
+                                    <p>Факт. </p><input style="margin-left: 25px;" type="text" value="{{ dataHeat.drifdact }}" size="4" readonly><input style="margin-left: 15px;" type="text" value="{{ dataHeat.limfdact }}" size="4" readonly><p class="p_r">[т/ч]</p><br>
+                                    <p>Устан. </p><input style="margin-left: 17px;" type="text" value="{{ dataHeat.drispecfdsetp }}" size="4" readonly><input style="margin-left: 15px;" type="text" value="{{ dataHeat.limfdsetp }}" size="4" readonly><p class="p_r">[т/ч]</p><br>
+                                    <p>Кол-во </p><input style="margin-left: 13px;" type="text" value="{{ dataHeat.drifdcons }}" size="2" readonly><p>[т]</p><input style="margin-left: 12px;" type="text" value="{{ dataHeat.limfdcons }}" size="4" readonly><p>[кг]</p><br>
+                                    <p>Конечн. </p><input style="margin-left: 6px;" type="text" value="{{ dataHeat.drifdtotwt }}" size="2" readonly><p>[т]</p><input style="margin-left: 12px;" type="text" value="{{ dataHeat.limfdtotwt }}" size="4" readonly><p>[кг]</p>
+                                </div>
+                            </fieldset>
+                            <fieldset class="nextdiv" style="margin-right: 0;">
+                                <legend>Энергия</legend>
+                                <div class="nextdiv">
+                                    <p>Общий расход </p><input class="p_r" type="text" value="{{ dataHeat.totalpower }}" size="5" readonly><p>[кВт.ч]</p><br>
+                                    <p>Остаток </p><input class="p_r" type="text" value="{{ dataHeat.remactentilltap }}" size="5" readonly><p>[кВт.ч]</p><br>
+                                    <p>Уд. расход </p><input class="p_r" type="text" value="{{ dataHeat.specactelen }}" size="5" readonly><p>[кВт.ч/т]</p><br>
+                                    <p>Остаток фаз. </p><input class="p_r" type="text" value="{{ dataHeat.specremenght }}" size="5" readonly><p>[кВт.ч]</p><br>
+                                    <p>Потери энергии </p><input class="p_r" type="text" value="{{ dataHeat.actlosses }}" size="5" readonly><p>[МВт]</p>
+                                </div>
+                                <div class="nextdiv">
+                                    <p>Активная </p><input class="p_r" type="text" value="{{ dataHeat.elepowact }}" size="3" readonly><p>[МВт]</p><br>
+                                    <p>Реактивная </p><input class="p_r" type="text" value="{{ dataHeat.elepowreact }}" size="3" readonly><p>[МВА]</p><br>
+                                    <p>Косинус Ф </p><input class="p_r" type="text" value="{{ dataHeat.powerfactor }}" size="3" readonly><br>
+                                    <p>Ступень факт. </p><input class="p_r" type="text" value="{{ dataHeat.elevoltapact }}" size="3" readonly><br>
+                                    <div style="min-width: 7px;display: inline-block;"></div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <br>
+                        <div class="nextdiv" style="padding-right: 0;">
+                            <div class="nextdiv" style="padding-right: 0;">
+                                <fieldset class="nextdiv" style="padding-right: 0;">
+                                    <legend>Инжекторные горелки</legend>
+                                    <div class="nextdiv">
+                                        <div style="min-width: 1px;display: inline-block;"><img src="http://eaf3oracle/img/dsp/gorel_inj.gif" border="0" width="25"></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 125px;">1</p></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 45px;">2</p></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 45px;">3</p></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 45px;">4</p></div><br>
+                                        <div style="min-width: 55px;display: inline-block;"><p>О2вд.</p></div><input style="margin-left: 0;" type="text" value="{{ dataBurner.injoxyflwght }}" size="2" readonly><p style="font-size: 12px;">[м3]</p><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxyflwght1 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxyflwght2 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxyflwght3 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxyflwght4 }}" size="2" readonly><br>
+                                        <div style="min-width: 55px;display: inline-block;"><p>О2гор.</p></div><input style="margin-left: 0;" type="text" value="{{ dataBurner.injoxywght }}" size="2" readonly><p style="font-size: 12px;">[м3]</p><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxywght1 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxywght2 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxywght3 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injoxywght4 }}" size="2" readonly><br>
+                                        <div style="min-width: 55px;display: inline-block;"><p>Газ</p></div><input style="margin-left: 0;" type="text" value="{{ dataBurner.injnatgaswght }}" size="2" readonly><p style="font-size: 12px;">[м3]</p><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injnatgaswght1 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injnatgaswght2 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injnatgaswght3 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.injnatgaswght4 }}" size="2" readonly>
+                                    </div>
+                                </fieldset><br>
+                                <fieldset class="nextdiv" style="padding-right: 0;">
+                                    <legend>Углеродные горелки</legend>
+                                    <div class="nextdiv">
+                                        <div style="min-width: 1px;display: inline-block;"><img src="http://eaf3oracle/img/dsp/gorel_carb.gif" border="0" width="25"></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 140px;">1</p></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 45px;">2</p></div><div style="min-width: 15px;display: inline-block;"><p style="margin-left: 45px;">3</p></div><br>
+                                        <div style="min-width: 70px;display: inline-block;"><p>О2гор. </p></div><input style="margin-left: 0;" type="text" value="{{ dataBurner.carboxywght }}" size="2" readonly><p style="font-size: 12px;">[м3]</p><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carboxywght1 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carboxywght2 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carboxywght3 }}" size="2" readonly><br>
+                                        <div style="min-width: 70px;display: inline-block;"><p>Газ </p></div><input style="margin-left: 0;" type="text" value="{{ dataBurner.carbnatgaswght }}" size="2" readonly><p style="font-size: 12px;">[м3]</p><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carbnatgaswght1 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carbnatgaswght2 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carbnatgaswght3 }}" size="2" readonly><br>
+                                        <div style="min-width: 70px;display: inline-block;"><p>Углерод </p></div><input style="margin-left: 0;" type="text" value="{{ dataBurner.carbcwght }}" size="2" readonly><p style="font-size: 12px;">[м3]</p><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carbcwght1 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carbcwght2 }}" size="2" readonly><input style="margin-left: 15px;" type="text" value="{{ dataBurner.carbcwght3 }}" size="2" readonly>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="nextdiv" style="padding-right: 0;">
+                                    <legend>Копье</legend>
+                                    <div class="nextdiv">
+                                        <div style="min-width: 0;display: inline-block;"><p>О2</p></div><br>
+                                        <input type="text" value="{{ dataHeat.mltotwt }}" size="2" readonly><p style="font-size: 12px;">[м3]</p>
+                                    </div>
+                                </fieldset>
+                                <br>
+                                <fieldset class="nextdiv scrollbox" style="padding-right: 0;max-width: 350px;margin-right: 1px;max-height: 150px;">
+                                    <legend>Celox и замеры T[°С]</legend>
+                                    <div style="min-width: 40px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Время</p></div><div style="min-width: 40px;display: inline-block;text-align: center;"><p style="font-size: 12px;">°С</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">O2</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">C</p></div><div style="min-width: 55px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Al</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">место</p></div>
+                                    <div class="nextdiv" ng-repeat="celoxIndex in dataCelox">
+                                        <input style="text-align: center;" type="text" value="{{ celoxIndex.mestime }}" size="2" readonly><input type="text" value="{{ celoxIndex.temper }}" size="2" readonly><input type="text" value="{{ celoxIndex.o2 }}" size="2" readonly><input type="text" value="{{ celoxIndex.carb }}" size="2" readonly><input type="text" value="{{ celoxIndex.al }}" size="4" readonly><input type="text" value="{{ celoxIndex.type }}" size="4" readonly>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="nextdiv" style="padding-right: 0;float: right;margin-top: 10px;margin-left: 50px;">
+                                <fieldset class="nextdiv" style="padding-right: 0;">
+                                    <div class="nextdiv">
+                                        <div style="min-width: 122px;display: inline-block;"><p>Темп. замер[°С] </p></div><input type="text" value="{{ dataHeat.temp_zamer }}" size="4" readonly><br>
+                                        <div style="min-width: 122px;display: inline-block;"><p>Темп. расч.[°С] </p></div><input type="text" value="{{ dataHeat.temp }}" size="4" readonly>
+                                    </div>
+                                </fieldset>
+                                <br>
+                                <fieldset class="nextdiv" style="padding-right: 0;margin-top: 5px;">
+                                    <div class="nextdiv">
+                                        <div style="min-width: 122px;display: inline-block;"><p>Факт. вес [т]</p></div><input type="text" value="{{ dataHeat.currmetbathwght }}" size="4" readonly><br>
+                                        <div style="min-width: 122px;display: inline-block;"><p>Цель  вес [т]</p></div><input type="text" value="{{ dataHeat.tapweightplan -- dataHeat.hotheelplan }}" size="4" readonly>
+                                    </div>
+                                </fieldset>
+                                <br>
+                                <fieldset class="nextdiv" style="padding-right: 0;margin-top: 70px;">
+                                    <legend>Перемешивание</legend>
+                                    <div class="nextdiv">
+                                        <div style="min-width: 0;display: inline-block;"><p style="margin-left: 68px;">Ar</p></div><div style="min-width: 0;display: inline-block;"><p style="margin-left: 25px;">N</p></div><br>
+                                        <div style="min-width: 53px;display: inline-block;"><p style="font-size: 14px;">Расход </p></div><input type="text" value="{{ dataHeat.stiraract }}" size="2" readonly><input type="text" value="{{ dataHeat.stirn2act }}" size="2" readonly><p style="font-size: 12px;">[л/мин]</p><br>
+                                        <div style="min-width: 53px;display: inline-block;"><p style="font-size: 14px;">Кол-во </p></div><input type="text" value="{{ dataHeat.stirarcons }}" size="2" readonly><input type="text" value="{{ dataHeat.stirn2cons }}" size="2" readonly><p style="font-size: 12px;">[л]</p>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: relative;display: inline-flex;top: -350px;">
+                        <img id="img1" style="position: absolute;left:0;top:115px;z-index:1;" src="http://eaf3oracle/img/dsp/dsp.gif" border="0" width="306" height="198">
+                        <img id="img5" style="position: absolute;left:37px;top:103px;z-index:5;" src="http://eaf3oracle/img/dsp/svod.gif" border="0" width="235" height="58">
+                        <div ng-if="dataHeat.buckets.trim().length === 0">
+                            <img id="img3" style="position: absolute;visibility:hidden;left:71px;top:153px;z-index:3;" src="http://eaf3oracle/img/dsp/scrap.gif" border="0" width="164" height="130">
+                            <img id="img4" style="position: absolute;visibility:hidden;left:71px;top:153px;z-index:4;" src="http://eaf3oracle/img/dsp/2korz.gif" border="0" width="164" height="130">
+                        </div>
+                        <div ng-if="dataHeat.buckets.trim().length <= 3 && dataHeat.buckets.trim().length > 0">
+                            <img style="position: absolute;left:71px;top:153px;z-index:3;" src="http://eaf3oracle/img/dsp/scrap.gif" border="0" width="164" height="130">
+                            <img style="position: absolute;visibility:hidden;left:71px;top:153px;z-index:4;" src="http://eaf3oracle/img/dsp/2korz.gif" border="0" width="164" height="130">
+                        </div>
+                        <div ng-if=" dataHeat.buckets.trim().length > 3">
+                            <img style="position: absolute;visibility:hidden;left:71px;top:153px;z-index:3;" src="http://eaf3oracle/img/dsp/scrap.gif" border="0" width="164" height="130">
+                            <img style="position: absolute;left:71px;top:153px;z-index:4;" src="http://eaf3oracle/img/dsp/2korz.gif" border="0" width="164" height="130">
+                        </div>
+                        <div ng-if="dataHeat.dspon === '0'">
+                            <img id="img7" style="position: absolute;visibility:hidden;left:103px;top:5px;z-index:7;" src="http://eaf3oracle/img/dsp/heats_on.gif" border="0" width="100" height="119">
+                        </div>
+                        <div ng-if="dataHeat.dspon > '0'">
+                            <img id="img8" style="position: absolute;left:103px;top:5px;z-index:7;" src="http://eaf3oracle/img/dsp/heats_on.gif" border="0" width="100" height="119">
+                        </div>
+                        <div ng-if="dataBurner.injnatgason > 0 || dataBurner.injoxyon > 0">
+                            <img id="img9" style="position: absolute;left:71px;top:185px;z-index:10;" src="http://eaf3oracle/img/dsp/gorel_inj.gif" border="0" width="65" height="30">
+                        </div>
+                        <div ng-if="dataBurner.injnatgason === 0 && dataBurner.injoxyon === 0">
+                            <img style="position: absolute;visibility:hidden;left:71px;top:185px;z-index:10;" src="http://eaf3oracle/img/dsp/gorel_inj.gif" border="0" width="65" height="30">
+                        </div>
+                        <div ng-if="dataBurner.carbnatgason > 0 || dataBurner.carbcon > 0">
+                            <img id="img12" style="position: absolute;left:169px;top:185px;z-index:10;" src="http://eaf3oracle/img/dsp/gorel_carb.gif" border="0" width="65" height="30">
+                        </div>
+                        <div ng-if="dataBurner.carbnatgason === 0 && dataBurner.carbcon === 0">
+                            <img style="position: absolute;visibility:hidden;left:169px;top:185px;z-index:10;" src="http://eaf3oracle/img/dsp/gorel_carb.gif" border="0" width="65" height="30">
+                        </div>
+                        <div ng-if="dataHeat.statusi != 'Tapping'">
+                            <img style="position:absolute;visibility:hidden;left:2px;top:5px;z-index:11;" src="http://eaf3oracle/img/dsp/sl.gif" border="0" width="303" height="328">
+                        </div>
+                        <div ng-if="dataHeat.statusi == 'Tapping'">
+                            <img id="img11" style="position:absolute;left:2px;top:5px;z-index:11;" src="http://eaf3oracle/img/dsp/sl.gif" border="0" width="303" height="328">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="nextdiv" style="padding-right: 0;">
+                        <fieldset class="nextdiv" style="padding-right: 0;margin-right: 1px;">
+                            <legend>Пробы</legend>
+                            <div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Проба</p></div><div style="min-width: 55px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Время</p></div><div style="min-width: 55px;display: inline-block;text-align: center;"><p style="font-size: 12px;">С</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Mn</p></div><div style="min-width: 55px;display: inline-block;text-align: center;"><p style="font-size: 12px;">P</p></div><div style="min-width: 40px;display: inline-block;text-align: center;"><p style="font-size: 12px;">S</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Si</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Cu</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Ni</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Cr</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Al</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Mo</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Sn</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Nb</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">V</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Ti</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">B</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Sb</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Ca</p></div><div style="min-width: 50px;display: inline-block;text-align: center;"><p style="font-size: 12px;">As</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Co</p></div><div style="min-width: 45px;display: inline-block;text-align: center;"><p style="font-size: 12px;">Pb</p></div>
+                            <div class="nextdiv" ng-repeat="sampleIndex in dataSample">
+                                <input style="text-align: center;margin-right: 5px;width: 45px;" type="text" value="{{ sampleIndex.sample }}" readonly><input style="text-align: center;margin-right: 10px;width: 45px;" type="text" value="{{ sampleIndex.times }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.c }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.mn }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.p }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.s }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.si }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.cu }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.ni }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.cr }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.al }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.mo }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.sn }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.nb }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.v }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.ti }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.b }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.sb }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.ca }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.as }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.co }}" readonly><input style="width: 48px;" type="text" value="{{ sampleIndex.pb }}" readonly>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div><!--/.col-xs-12.col-sm-8-->
+</div><!--/row-->

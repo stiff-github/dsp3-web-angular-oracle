@@ -1,0 +1,131 @@
+<div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-xs-12 col-sm-8" id="noprint0">
+        <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+        </p>
+        <div class="row">
+            <form>
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <label for="selectHeats">№ плавки:</label>
+                        </br>
+                        <input style="width: 80px; text-align:left;" type="text" placeholder="Фильтр №" ng-model="fltrHeats">
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <select style="width: 80px; text-align:left;" size="10" name="selectHeats" id="selectHeats" ng-model="numHeat">
+                            <option ng-repeat="lstHeat in lstHeats | filter: fltrHeats">{{lstHeat.heatid}}</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4">
+                        <br />
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                              <button style="width: 160px; text-align:left;" class="btn btn-default" type="button" ng-click="addHeatF(numHeat)">Первая плавка <span class="glyphicon glyphicon-chevron-right"></span></button>
+                            </span>
+                            <input style="width: 80px; text-align:left;" type="text" readonly class="form-control" value="{{fistHeat}}">
+                        </div>
+                        <br /><br />
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                              <button style="width: 160px; text-align:left;" class="btn btn-default" type="button" ng-click="addHeatL(numHeat)">Последняя плавка <span class="glyphicon glyphicon-chevron-right"></span></button>
+                            </span>
+                            <input style="width: 80px; text-align:left;" type="text" readonly class="form-control" value="{{lastHeat}}">
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <br /><br /><br />
+                        <button type="button" class="btn btn-success" ng-click="openReport()"><span class="glyphicon glyphicon-list-alt"></span> Отчёт</button>
+                    </div>
+                    <div class="col-xs-2" style="display:{{vsblPrintReport}}">
+                        <br /><br /><br />
+                        <button type="button" class="btn btn-info" ng-click="printReport()"><span class="glyphicon glyphicon-print"></span> Печать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div><!--/.col-xs-12.col-sm-8-->
+    <!--<div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar">
+        <input type="text" placeholder="Поиск..." ng-model="search">
+    </div><!--/.sidebar-offcanvas-->
+    <div class="col-xs-12 col-sm-8" style="display:{{vsblReport}}" id="print1">
+        <hr id="noprint2">
+        <div class="table-responsive" id="print2">
+        <table class="table table-bordered table-hover table-report table-condensed" id="printArea">
+            <thead>
+            <tr>
+                <td colspan="2">БМЗ</td>
+                <td colspan="5">ОТЧЁТ ПО ГОРЕЛКАМ</td>
+                <td colspan="3">АСУТП ЭСПЦ ДСП-3</td>
+            </tr>
+            <tr>
+                <td colspan="10" style="text-align: right">выдан {{rptDate | date: 'dd.MM.yyyy HH:mm'}}</td>
+            </tr>
+            <tr>
+                <td>№ плавки</td>
+                <td></td>
+                <td>Инжект. 1</td>
+                <td>Инжект. 2</td>
+                <td>Инжект. 3</td>
+                <td>Инжект. 4</td>
+                <td>Углерод. 1</td>
+                <td>Углерод. 2</td>
+                <td>Углерод. 3</td>
+                <td>Общий</td>
+            </tr>
+            </thead>
+            <tbody ng-repeat="dataBurner in dataBurners">
+            <tr>
+                <td rowspan="4" style="vertical-align:middle">{{dataBurner.heatid}}</td>
+                <td>газ, м3</td>
+                <td>{{dataBurner.injnatgaswght1}}</td>
+                <td>{{dataBurner.injnatgaswght2}}</td>
+                <td>{{dataBurner.injnatgaswght3}}</td>
+                <td>{{dataBurner.injnatgaswght4}}</td>
+                <td>{{dataBurner.carbnatgaswght1}}</td>
+                <td>{{dataBurner.carbnatgaswght2}}</td>
+                <td>{{dataBurner.carbnatgaswght3}}</td>
+                <td>{{dataBurner.gas}}</td>
+            </tr>
+            <tr>
+                <td>О2 гор, м3</td>
+                <td>{{dataBurner.injoxywght1}}</td>
+                <td>{{dataBurner.injoxywght2}}</td>
+                <td>{{dataBurner.injoxywght3}}</td>
+                <td>{{dataBurner.injoxywght4}}</td>
+                <td>{{dataBurner.carboxywght1}}</td>
+                <td>{{dataBurner.carboxywght2}}</td>
+                <td>{{dataBurner.carboxywght3}}</td>
+                <td>{{dataBurner.o2gor}}</td>
+            </tr>
+            <tr>
+                <td>О2 дутья, м3</td>
+                <td>{{dataBurner.injoxyflwght1}}</td>
+                <td>{{dataBurner.injoxyflwght2}}</td>
+                <td>{{dataBurner.injoxyflwght3}}</td>
+                <td>{{dataBurner.injoxyflwght4}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{dataBurner.o2vduv}}</td>
+            </tr>
+            <tr>
+                <td>С, кг</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{dataBurner.carbcwght1}}</td>
+                <td>{{dataBurner.carbcwght2}}</td>
+                <td>{{dataBurner.carbcwght3}}</td>
+                <td>{{dataBurner.coke}}</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div><!--/row-->
